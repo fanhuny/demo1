@@ -43,7 +43,7 @@ public class HelloController {
     public String updatePassword(@RequestParam(value="userId") Integer userId, @RequestParam(value="password") String password,
                                  @RequestParam(value="newPassword") String newPassword){
         if(userId <= 0 || userId > 2){
-            return "未知的用户";
+            return "未知用户";
         }
         if(StringUtils.isEmpty(password) || StringUtils.isEmpty(newPassword)){
             return "密码不能为空";
