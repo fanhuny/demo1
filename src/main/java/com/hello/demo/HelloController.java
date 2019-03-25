@@ -43,12 +43,15 @@ public class HelloController {
     public String updatePassword(@RequestParam(value="userId") Integer userId, @RequestParam(value="password") String password,
                                  @RequestParam(value="newPassword") String newPassword){
         if(userId <= 0 || userId > 2){
-            return "未知用户";
+            System.out.println("未知用户");
+            return "未知的用户";
         }
         if(StringUtils.isEmpty(password) || StringUtils.isEmpty(newPassword)){
+            System.out.println("密码不能为空");
             return "密码不能为空";
         }
         if(password.equals(newPassword)){
+            System.out.println("新旧密码不能相同");
             return "新旧密码不能相同";
         }
         return "密码修改成功!";
