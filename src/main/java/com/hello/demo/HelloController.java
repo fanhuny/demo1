@@ -22,10 +22,10 @@ public class HelloController {
     @ApiOperation(value="根据用户编号获取用户姓名", notes="test: 仅1和2有正确返回")
     public String getUserName(@RequestParam Integer userNumber){
         if(userNumber == 1){
-            return "王六";
+            return "中山装";
         }
         else if(userNumber == 2){
-            return "李白";
+            return "和服";
         }
         else{
             return "未知";
